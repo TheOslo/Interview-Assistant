@@ -1,0 +1,72 @@
+body {
+    font-family: sans-serif;
+    background: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    }
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    .layout {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    }
+    form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+    textarea, select {
+    width: 100%;
+    margin-top: 5px;
+    }
+    #problem {
+    height: 100px;
+    }
+    #code {
+    height: 200px;
+    font-family: monospace;
+    }
+    button {
+    padding: 10px;
+    cursor: pointer;
+    }
+    .result-container {
+    flex: 1;
+    }
+    #resultBox {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 200px;
+    white-space: pre-wrap;
+    }
+    hr {
+    margin: 40px 0;
+    }
+    #historyContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+    .history-item {
+    border: 1px solid #cccccc;
+    padding: 15px;
+    border-radius: 5px;
+    }
+    .history-pre {
+    background: #eeeeff;
+    padding: 10px;
+    border-radius: 3px;
+    overflow-x: auto;
+    }
+    .history-eval {
+    white-space: pre-wrap;
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 3px solid #333333;
+    }

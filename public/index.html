@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Coding Interview Assistant</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<h1>AI Coding Interview Assistant</h1>
+<div class="layout">
+<form id="evalForm">
+<div>
+<label>Problem Description:</label>
+<textarea id="problem" required></textarea>
+</div>
+<div>
+<label>Language:</label>
+<select id="language">
+<option value="C++">C++</option>
+<option value="C">C</option>
+<option value="Python">Python</option>
+<option value="Java">Java</option>
+</select>
+</div>
+<div>
+<label>Persona / Skill:</label>
+<select id="skill">
+<option value="interviewer">Standard Interviewer</option>
+<option value="caveman">Caveman</option>
+<option value="direct">Direct / Concise</option>
+</select>
+</div>
+<div>
+<label>User Code:</label>
+<textarea id="code" required></textarea>
+</div>
+<button type="submit" id="submitBtn">Submit Code</button>
+</form>
+<div class="result-container">
+<h2>Current Evaluation</h2>
+<div id="resultBox"></div>
+</div>
+</div>
+<hr>
+<h2>Submission History</h2>
+<div id="historyContainer"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

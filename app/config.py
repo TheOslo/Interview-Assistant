@@ -1,21 +1,20 @@
-import os
 import logging
-from dotenv import load_dotenv
-
-load_dotenv()
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    handlers=[
-        logging.StreamHandler()
-    ]
 )
 
-logger = logging.getLogger("app")
+class Settings(BaseSettings):
 
-class Settings:
-    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-    MONGODB_URI: str = os.getenv("MONGODB_URI", "")
+    GEMINI_API_KEY: str
+    MONGODB_URI: str
+    
+    MONGODB_DB_NAME: str = "interview_assistant"
+    
+    ENVIRONMENT: str = "development"
+
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 settings = Settings()
